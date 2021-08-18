@@ -32,29 +32,56 @@ class App extends React.Component {
                 "rating": 7.9,
                 "overview": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
                 "imgURL": "https://www.intersinema.com/film/resimler/11/11655_a_1100.jpg"
+            }, {
+                "id": 5,
+                "name": "Kolpaçino",
+                "rating": 6.8,
+                "overview": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+                "imgURL": "https://upload.wikimedia.org/wikipedia/tr/9/9f/Kolpa%C3%A7ino.jpg"
+            }, {
+                "id": 6,
+                "name": "Recep İvedik 4 ",
+                "rating": 6.8,
+                "overview": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+                "imgURL": "http://i.imgur.com/T9AMP4o.jpg"
             }
-        ]
+        ],
+        searchQuery: ""
     }
 
     deleteMovie = (movie) => {
         const newMovieList = this.state.movies.filter(
             m => m.id !== movie.id
         )
-        this.setState({
+
+        this.setState(state => ({
             movies: newMovieList
+        }))
+    }
+
+    searchMovie = (event) => {
+        this.setState({
+            searchQuery: event.target.value
         })
     }
 
     render() {
+        let filteredMovies = this.state.movies.filter(
+            (movie) => {
+                return movie.name.toLocaleLowerCase().indexOf(this.state.searchQuery.toLocaleLowerCase()) !== -1
+            }
+        )
         return (
-            <div className="container">
+            <div className="container" >
                 <div className="row">
                     <div className="col-lg-12">
-                        <SearchBar />
+                        <SearchBar
+                            searchMovieProp={this.searchMovie}
+                        />
                     </div>
                 </div>
                 <MovieList
-                    movies={this.state.movies}
+                    movies={filteredMovies}
                     deleteMovieProp={this.deleteMovie}
                 />
             </div>
