@@ -1,0 +1,32 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "The Batman",
+            "rating": 8.3,
+            "overview": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+            "imgURL": "https://cdn.kayiprihtim.com/wp-content/uploads/2018/11/batman-begins-kapak.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Interstellar",
+            "rating": 6.8,
+            "overview": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+            "imgURL": "https://tr.web.img2.acsta.net/pictures/14/10/09/15/52/150664.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Kolpaçino",
+            "rating": 6.8,
+            "overview": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+            "imgURL": "https://upload.wikimedia.org/wikipedia/tr/9/9f/Kolpa%C3%A7ino.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Recep İvedik 4 ",
+            "rating": 6.8,
+            "overview": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+            "imgURL": "http://i.imgur.com/T9AMP4o.jpg"
+        }
+    ]
+}
