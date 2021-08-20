@@ -13,9 +13,6 @@ $ npm install
 # Start the react
 $ npm start
 
-# start the json-server
-$ npm run server
-
 # Build
 $ npm run build
 
